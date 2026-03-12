@@ -1,9 +1,7 @@
 const ICON_DARK  = 'data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KCjwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCjxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+Cgo8ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KCjxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPHBhdGggZD0ibSA3LjUgMCBjIC0wLjI3NzM0NCAwIC0wLjUgMC4yMjI2NTYgLTAuNSAwLjUgdiAyIGMgMCAwLjI3NzM0NCAwLjIyMjY1NiAwLjUgMC41IDAuNSBoIDEgYyAwLjI3NzM0NCAwIDAuNSAtMC4yMjI2NTYgMC41IC0wLjUgdiAtMiBjIDAgLTAuMjc3MzQ0IC0wLjIyMjY1NiAtMC41IC0wLjUgLTAuNSB6IG0gLTQuNDQ5MjE5IDEuODQzNzUgYyAtMC4xMjg5MDYgMCAtMC4yNTM5MDYgMC4wNDY4NzUgLTAuMzUxNTYyIDAuMTQ0NTMxIGwgLTAuNzEwOTM4IDAuNzEwOTM4IGMgLTAuMTk1MzEyIDAuMTk1MzEyIC0wLjE5NTMxMiAwLjUwNzgxMiAwIDAuNzA3MDMxIGwgMS40MTc5NjkgMS40MTQwNjIgYyAwLjE5NTMxMiAwLjE5NTMxMyAwLjUwNzgxMiAwLjE5NTMxMyAwLjcwNzAzMSAwIGwgMC43MDcwMzEgLTAuNzA3MDMxIGMgMC4xOTUzMTMgLTAuMTk5MjE5IDAuMTk1MzEzIC0wLjUxMTcxOSAwIC0wLjcwNzAzMSBsIC0xLjQxNDA2MiAtMS40MTc5NjkgYyAtMC4xMDE1NjIgLTAuMDk3NjU2IC0wLjIyNjU2MiAtMC4xNDQ1MzEgLTAuMzU1NDY5IC0wLjE0NDUzMSB6IG0gOS44OTg0MzggMCBjIC0wLjEyODkwNyAwIC0wLjI1MzkwNyAwLjA0Njg3NSAtMC4zNTU0NjkgMC4xNDQ1MzEgbCAtMS40MTQwNjIgMS40MTc5NjkgYyAtMC4xOTUzMTMgMC4xOTUzMTIgLTAuMTk1MzEzIDAuNTA3ODEyIDAgMC43MDcwMzEgbCAwLjcwNzAzMSAwLjcwNzAzMSBjIDAuMTk5MjE5IDAuMTk1MzEzIDAuNTExNzE5IDAuMTk1MzEzIDAuNzA3MDMxIDAgbCAxLjQxNzk2OSAtMS40MTQwNjIgYyAwLjE5NTMxMiAtMC4xOTkyMTkgMC4xOTUzMTIgLTAuNTExNzE5IDAgLTAuNzA3MDMxIGwgLTAuNzEwOTM4IC0wLjcxMDkzOCBjIC0wLjA5NzY1NiAtMC4wOTc2NTYgLTAuMjIyNjU2IC0wLjE0NDUzMSAtMC4zNTE1NjIgLTAuMTQ0NTMxIHogbSAtNC45NDkyMTkgMi4xNjQwNjIgYyAtMi4xOTUzMTIgMCAtNCAxLjgwNDY4OCAtNCA0IGMgMCAyLjE5MTQwNyAxLjgwNDY4OCA0IDQgNCBzIDQgLTEuODA4NTkzIDQgLTQgYyAwIC0yLjE5NTMxMiAtMS44MDQ2ODggLTQgLTQgLTQgeiBtIC03LjUgMi45OTIxODggYyAtMC4yNzczNDQgMCAtMC41IDAuMjIyNjU2IC0wLjUgMC41IHYgMSBjIDAgMC4yNzczNDQgMC4yMjI2NTYgMC41IDAuNSAwLjUgaCAyIGMgMC4yNzczNDQgMCAwLjUgLTAuMjIyNjU2IDAuNSAtMC41IHYgLTEgYyAwIC0wLjI3NzM0NCAtMC4yMjI2NTYgLTAuNSAtMC41IC0wLjUgeiBtIDEzIDAgYyAtMC4yNzczNDQgMCAtMC41IDAuMjIyNjU2IC0wLjUgMC41IHYgMSBjIDAgMC4yNzczNDQgMC4yMjI2NTYgMC41IDAuNSAwLjUgaCAyIGMgMC4yNzczNDQgMCAwLjUgLTAuMjIyNjU2IDAuNSAtMC41IHYgLTEgYyAwIC0wLjI3NzM0NCAtMC4yMjI2NTYgLTAuNSAtMC41IC0wLjUgeiBtIC05Ljc0MjE4OCA0LjAzNTE1NiBjIC0wLjEyODkwNiAwIC0wLjI1MzkwNiAwLjA0Njg3NSAtMC4zNTE1NjIgMC4xNDQ1MzIgbCAtMS40MTc5NjkgMS40MTQwNjIgYyAtMC4xOTUzMTIgMC4xOTkyMTkgLTAuMTk1MzEyIDAuNTExNzE5IDAgMC43MDcwMzEgbCAwLjcxMDkzOCAwLjcxMDkzOCBjIDAuMTk1MzEyIDAuMTk1MzEyIDAuNTA3ODEyIDAuMTk1MzEyIDAuNzA3MDMxIDAgbCAxLjQxNDA2MiAtMS40MTc5NjkgYyAwLjE5NTMxMyAtMC4xOTUzMTIgMC4xOTUzMTMgLTAuNTA3ODEyIDAgLTAuNzA3MDMxIGwgLTAuNzA3MDMxIC0wLjcwNzAzMSBjIC0wLjEwMTU2MiAtMC4wOTc2NTcgLTAuMjI2NTYyIC0wLjE0NDUzMiAtMC4zNTU0NjkgLTAuMTQ0NTMyIHogbSA4LjQ4NDM3NiAwIGMgLTAuMTI4OTA3IDAgLTAuMjUzOTA3IDAuMDQ2ODc1IC0wLjM1NTQ2OSAwLjE0NDUzMiBsIC0wLjcwNzAzMSAwLjcwNzAzMSBjIC0wLjE5NTMxMyAwLjE5OTIxOSAtMC4xOTUzMTMgMC41MTE3MTkgMCAwLjcwNzAzMSBsIDEuNDE0MDYyIDEuNDE3OTY5IGMgMC4xOTkyMTkgMC4xOTUzMTIgMC41MTE3MTkgMC4xOTUzMTIgMC43MDcwMzEgMCBsIDAuNzEwOTM4IC0wLjcxMDkzOCBjIDAuMTk1MzEyIC0wLjE5NTMxMiAwLjE5NTMxMiAtMC41MDc4MTIgMCAtMC43MDcwMzEgbCAtMS40MTc5NjkgLTEuNDE0MDYyIGMgLTAuMDk3NjU2IC0wLjA5NzY1NyAtMC4yMjI2NTYgLTAuMTQ0NTMyIC0wLjM1MTU2MiAtMC4xNDQ1MzIgeiBtIC00Ljc0MjE4OCAxLjk2NDg0NCBjIC0wLjI3NzM0NCAwIC0wLjUgMC4yMjI2NTYgLTAuNSAwLjUgdiAyIGMgMCAwLjI3NzM0NCAwLjIyMjY1NiAwLjUgMC41IDAuNSBoIDEgYyAwLjI3NzM0NCAwIDAuNSAtMC4yMjI2NTYgMC41IC0wLjUgdiAtMiBjIDAgLTAuMjc3MzQ0IC0wLjIyMjY1NiAtMC41IC0wLjUgLTAuNSB6IG0gMCAwIiBmaWxsPSIjN2UxZGZiIi8+IDwvZz4KCjwvc3ZnPg==';
 const ICON_LIGHT = 'data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KCjwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCjxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+Cgo8ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KCjxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPHBhdGggZD0ibSA2LjgxNjQwNiAxLjAxMTcxOSBjIC0zLjMwODU5NCAwLjU3MDMxMiAtNS44Mzk4NDQgMy40NzI2NTYgLTUuODM5ODQ0IDYuOTQxNDA2IGMgMCAzLjg3MTA5NCAzLjE2MDE1NyA3LjA0Njg3NSA3LjAyMzQzOCA3LjA0Njg3NSBjIDEuNzUzOTA2IDAgMy4zNjcxODggLTAuNjYwMTU2IDQuNTk3NjU2IC0xLjczNDM3NSBjIDAuNjA1NDY5IC0wLjUyNzM0NCAwLjM3MTA5NCAtMS41MTU2MjUgLTAuNDA2MjUgLTEuNzIyNjU2IGMgLTIuODEyNSAtMC43MzQzNzUgLTQuOTE0MDYyIC0zLjMwNDY4OCAtNC45MTQwNjIgLTYuMzY3MTg4IGMgMCAtMC45ODQzNzUgMC4yMjI2NTYgLTEuOTEwMTU2IDAuNjEzMjgxIC0yLjc1NzgxMiBjIDAuMzM5ODQ0IC0wLjczMDQ2OSAtMC4yODEyNSAtMS41MzkwNjMgLTEuMDc0MjE5IC0xLjQwNjI1IHogbSAwIDAiIGZpbGw9IiM3ZTFkZmIiLz4gPC9nPgoKPC9zdmc+';
 
-// ─────────────────────────────────────────────
-//  SKYCAST — app.js
-// ─────────────────────────────────────────────
+
 
 const WEATHER_ICONS = {
   '01d':'☀️','01n':'🌙','02d':'⛅','02n':'🌙',
@@ -16,15 +14,13 @@ const WEATHER_ICONS = {
 const AQI_LABELS = { 1:'Good', 2:'Fair', 3:'Moderate', 4:'Poor', 5:'Very Poor' };
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
-// ── State ─────────────────────────────────────
 let langCache = {};
-let API_KEY   = localStorage.getItem('owm_key')      || '808596ff3f56bbba8683587bb4a86868';
+let API_KEY = null;
 let CUR_LANG  = localStorage.getItem('skycast_lang') || 'en';
 let CUR_CITY  = '';
 let lastLat   = null;
 let lastLon   = null;
 
-// ── Init ──────────────────────────────────────
 window.addEventListener('DOMContentLoaded', async () => {
 
   // Theme
@@ -33,7 +29,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('toggleIcon').src = savedTheme === 'dark' ? ICON_DARK : ICON_LIGHT;
   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
-  // Lang button
   document.getElementById('langBtn').addEventListener('click', (e) => {
     e.stopPropagation();
     const menu = document.getElementById('langMenu');
@@ -62,16 +57,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (e.key === 'Enter') fetchWeather();
   });
 
-  // Live clock
   updateClock();
   setInterval(updateClock, 1000);
 
-  // Start canvas (idle = clear)
   initCanvas();
   drawWeatherEffect('clear');
 });
 
-// ── Live clock ────────────────────────────────
 function updateClock() {
   const now = new Date();
   const h = String(now.getHours()).padStart(2,'0');
@@ -80,7 +72,6 @@ function updateClock() {
   document.getElementById('liveClock').textContent = `${h}:${m}:${s}`;
 }
 
-// ── Language ──────────────────────────────────
 async function applyLang(code) {
   try {
     const res = await fetch(`lang/${code}.json`);
@@ -130,7 +121,6 @@ function toggleTheme() {
   document.getElementById('toggleIcon').src = next === 'dark' ? ICON_DARK : ICON_LIGHT;
 }
 
-// ── API key ───────────────────────────────────
 function saveApiKey() {
   const val = document.getElementById('apiKeyInput').value.trim();
   if (!val) return;
@@ -138,26 +128,12 @@ function saveApiKey() {
   localStorage.setItem('owm_key', val);
   document.getElementById('apiNotice').classList.add('hidden');
 }
-fetch(`/api/weather?city=${city}`)
-  .then(res => res.json())
-  .then(data => {
-
-    if (data.error) {
-      alert(data.error);
-      return;
-    }
-
-    console.log(data);
-
-  });
-// ── UI state ──────────────────────────────────
 function setState(name) {
   ['Idle','Loading','Error','Result'].forEach(s => {
     document.getElementById('state'+s).classList.toggle('hidden', s.toLowerCase() !== name);
   });
 }
 
-// ── Fetch weather ─────────────────────────────
 async function fetchWeather() {
   const city = document.getElementById('cityInput').value.trim();
   if (!city) return;
@@ -170,12 +146,16 @@ async function fetchWeather() {
   CUR_CITY = city;
   setState('loading');
   try {
-    const base   = 'https://api.openweathermap.org/data/2.5';
-    const params = `q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric&lang=${CUR_LANG}`;
-    const [curRes, foreRes] = await Promise.all([
-      fetch(`${base}/weather?${params}`),
-      fetch(`${base}/forecast?${params}`),
-    ]);
+const res = await fetch(`/api/weather?city=${encodeURIComponent(city)}`);
+const data = await res.json();
+
+if (!res.ok || data.error) {
+  throw new Error(data.error || "Weather request failed");
+}
+
+const current  = data.weather;
+const forecast = data.forecast;
+    
     if (!curRes.ok) {
       if (curRes.status === 401) throw new Error('Invalid API key.');
       if (curRes.status === 404) throw new Error(`City "${city}" not found.`);
@@ -184,7 +164,6 @@ async function fetchWeather() {
     const current  = await curRes.json();
     const forecast = await foreRes.json();
 
-    // Store coords for AQI call
     lastLat = current.coord.lat;
     lastLon = current.coord.lon;
 
@@ -202,7 +181,6 @@ async function fetchWeather() {
   }
 }
 
-// ── Render current ────────────────────────────
 function renderCurrent(data) {
   const t = langCache;
   document.getElementById('rCity').textContent =
@@ -223,7 +201,6 @@ function renderCurrent(data) {
   document.getElementById('rVis').textContent       = (data.visibility/1000).toFixed(1)+' km';
 }
 
-// ── Render sunrise/sunset ─────────────────────
 function renderSunTimes(data) {
   const locale = CUR_LANG==='zh_cn'?'zh-CN': CUR_LANG==='ar'?'ar-DZ': CUR_LANG;
   const fmt = t => new Date(t*1000).toLocaleTimeString(locale,{hour:'2-digit',minute:'2-digit'});
@@ -234,19 +211,17 @@ function renderSunTimes(data) {
   document.getElementById('rSunrise').textContent = fmt(rise);
   document.getElementById('rSunset').textContent  = fmt(set);
 
-  // Arc progress: 0 = sunrise, 1 = sunset
   const total    = set - rise;
   const elapsed  = Math.min(Math.max(now - rise, 0), total);
-  const progress = elapsed / total;               // 0 → 1
+  const progress = elapsed / total;            
   const arcLen   = 160;
   const offset   = arcLen * (1 - progress);
 
   document.getElementById('sunArcProgress').style.strokeDashoffset = offset;
 
-  // Move dot along arc (parabolic path approximation)
   const t2  = progress;
-  const cx  = 10 + t2 * 100;           // x: 10 → 110
-  const cy  = 55 - Math.sin(t2*Math.PI)*55; // y: follows arc
+  const cx  = 10 + t2 * 100;           
+  const cy  = 55 - Math.sin(t2*Math.PI)*55; 
   document.getElementById('sunDot').setAttribute('cx', cx.toFixed(1));
   document.getElementById('sunDot').setAttribute('cy', cy.toFixed(1));
 }
@@ -265,12 +240,10 @@ async function renderAQI(lat, lon) {
     badge.textContent = AQI_LABELS[aqi] || '—';
     badge.className   = `aqi-badge aqi-${aqi}`;
 
-    // Bar: fill covers right portion, marker moves left-to-right
     const pct = ((aqi-1)/4)*100;
     document.getElementById('rAqiBar').style.transform    = `scaleX(${(100-pct)/100})`;
     document.getElementById('rAqiMarker').style.left      = pct+'%';
 
-    // Pollutant pills
     const pills = [
       {k:'PM2.5', v:comp.pm2_5},
       {k:'PM10',  v:comp.pm10},
@@ -286,7 +259,6 @@ async function renderAQI(lat, lon) {
   }
 }
 
-// ── Render forecast ───────────────────────────
 function renderForecast(data) {
   const dailyMap = {};
   data.list.forEach(item => {
@@ -307,9 +279,7 @@ function renderForecast(data) {
   }).join('');
 }
 
-// ─────────────────────────────────────────────
-//  CANVAS WEATHER ANIMATIONS
-// ─────────────────────────────────────────────
+
 let canvasParticles = [];
 let canvasAnim = null;
 let currentEffect = 'clear';
@@ -410,7 +380,6 @@ function startSnow(canvas, ctx) {
   animate();
 }
 
-// Clear — subtle floating sparkles
 function startClear(canvas, ctx) {
   for (let i=0; i<60; i++) {
     canvasParticles.push({
@@ -439,7 +408,6 @@ function startClear(canvas, ctx) {
   animate();
 }
 
-// Cloudy — drifting semi-transparent wisps
 function startCloudy(canvas, ctx) {
   for (let i=0; i<18; i++) {
     canvasParticles.push({
@@ -468,7 +436,6 @@ function startCloudy(canvas, ctx) {
   animate();
 }
 
-// ── Utils ─────────────────────────────────────
 function capitalise(str) {
   return str.charAt(0).toUpperCase()+str.slice(1);
 }
