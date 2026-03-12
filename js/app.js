@@ -15,7 +15,6 @@ const AQI_LABELS = { 1:'Good', 2:'Fair', 3:'Moderate', 4:'Poor', 5:'Very Poor' }
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
 let langCache = {};
-let API_KEY = null;
 let CUR_LANG  = localStorage.getItem('skycast_lang') || 'en';
 let CUR_CITY  = '';
 let lastLat   = null;
@@ -121,11 +120,8 @@ function toggleTheme() {
 }
 
 
-<<<<<<< HEAD
 
-// ── UI state ──────────────────────────────────
-=======
->>>>>>> eafe27d1804cb77c1b4f9f057e278c2ae1756e10
+
 function setState(name) {
   ['Idle','Loading','Error','Result'].forEach(s => {
     document.getElementById('state'+s).classList.toggle('hidden', s.toLowerCase() !== name);
@@ -135,35 +131,20 @@ function setState(name) {
 async function fetchWeather() {
   const city = document.getElementById('cityInput').value.trim();
   if (!city) return;
-  if (!API_KEY) {
-    document.getElementById('apiNotice').classList.remove('hidden');
-    setState('error');
-    document.getElementById('errorMsg').textContent = 'Please enter your API key first.';
-    return;
-  }
+
   CUR_CITY = city;
   setState('loading');
+
   try {
-<<<<<<< HEAD
-=======
-const res = await fetch(`/api/weather?city=${encodeURIComponent(city)}`);
-const data = await res.json();
+    const res = await fetch(`/api/weather?city=${encodeURIComponent(city)}`);
+    const data = await res.json();
 
-if (!res.ok || data.error) {
-  throw new Error(data.error || "Weather request failed");
-}
-
-const current  = data.weather;
-const forecast = data.forecast;
-    
->>>>>>> eafe27d1804cb77c1b4f9f057e278c2ae1756e10
-    if (!curRes.ok) {
-      if (curRes.status === 401) throw new Error('Invalid API key.');
-      if (curRes.status === 404) throw new Error(`City "${city}" not found.`);
-      throw new Error('Unknown error.');
+    if (!res.ok || data.error) {
+      throw new Error(data.error || "Weather request failed");
     }
-    const current  = await curRes.json();
-    const forecast = await foreRes.json();
+
+    const current  = data.weather;
+    const forecast = data.forecast;
 
     lastLat = current.coord.lat;
     lastLon = current.coord.lon;
@@ -171,10 +152,10 @@ const forecast = data.forecast;
     renderCurrent(current);
     renderForecast(forecast);
     renderSunTimes(current);
-    await renderAQI(lastLat, lastLon);
 
     setState('result');
     drawWeatherEffect(current.weather[0].main.toLowerCase());
+
   } catch(err) {
     setState('error');
     document.getElementById('errorMsg').textContent = '⚠️ ' + (err.message || 'Failed to fetch.');
