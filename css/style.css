@@ -2,9 +2,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ══════════════════════════════════════
-   DARK THEME — Obsidian
-   ══════════════════════════════════════ */
+
 [data-theme="dark"] {
   --bg:           #161616;
   --bg-alt:       #1a1a1a;
@@ -549,16 +547,13 @@ footer {
   to   { transform: translateY(0); opacity: 1; }
 }
 
-/* ── Global theme transition ── */
 *, *::before, *::after {
   transition: background-color 0.45s ease, border-color 0.45s ease, color 0.45s ease, box-shadow 0.45s ease;
 }
-/* Exclude animations from transition override */
 .orb, .weather-icon-wrap, .loading-dots span {
   transition: none;
 }
 
-/* ── Responsive ── */
 @media (max-width: 420px) {
   .temp-big     { font-size: 5.2rem; }
   .stats-grid   { grid-template-columns: repeat(2, 1fr); }
@@ -567,7 +562,6 @@ footer {
   .city-name    { font-size: 2.2rem; }
 }
 
-/* ── Toggle icon image ── */
 .toggle-img {
   width: 100%;
   height: 100%;
@@ -575,7 +569,6 @@ footer {
   display: block;
 }
 
-/* ── Language dropdown ── */
 .lang-dropdown {
   position: relative;
   flex-shrink: 0;
@@ -614,7 +607,7 @@ footer {
 }
 .lang-menu-portal {
   position: fixed;
-  top: 0; left: 0; /* overridden by JS */
+  top: 0; left: 0; 
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -649,17 +642,24 @@ footer {
   background: var(--badge-bg);
 }
 
-/* ── Weather canvas background ── */
 #weatherCanvas {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.45;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
 }
 
-/* ── Live clock ── */
+
+.weather-card,
+.forecast-card,
+.extra-card {
+  width: 100%;
+}
+
+
 .live-clock {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
@@ -672,7 +672,6 @@ footer {
   white-space: nowrap;
 }
 
-/* ── Extra row (sun + aqi) ── */
 .extra-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -700,7 +699,6 @@ footer {
   opacity: 0.85;
 }
 
-/* ── Sunrise / Sunset ── */
 .sun-row {
   display: flex;
   align-items: center;
@@ -748,7 +746,6 @@ footer {
   transition: cx 1.2s cubic-bezier(0.4,0,0.2,1), cy 1.2s cubic-bezier(0.4,0,0.2,1);
 }
 
-/* ── AQI card ── */
 .aqi-score-row {
   display: flex;
   align-items: center;
@@ -773,7 +770,6 @@ footer {
   color: var(--glow);
   border: 1px solid var(--border-hi);
 }
-/* AQI badge colors */
 .aqi-badge.aqi-1 { background: rgba(0,200,100,0.15); color: #00c864; border-color: rgba(0,200,100,0.3); }
 .aqi-badge.aqi-2 { background: rgba(160,230,0,0.15); color: #a0e600; border-color: rgba(160,230,0,0.3); }
 .aqi-badge.aqi-3 { background: rgba(255,180,0,0.15); color: #ffb400; border-color: rgba(255,180,0,0.3); }
@@ -831,4 +827,49 @@ footer {
   border: 1px solid var(--border);
   color: var(--text);
   opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+
+  .wrapper {
+    padding: 20px;
+  }
+
+  .logo-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .forecast-row {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .forecast-item {
+    min-width: 90px;
+  }
+
 }
