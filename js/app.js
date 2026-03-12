@@ -22,7 +22,6 @@ let lastLon   = null;
 
 window.addEventListener('DOMContentLoaded', async () => {
 
-  // Theme
   const savedTheme = localStorage.getItem('skycast_theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   document.getElementById('toggleIcon').src = savedTheme === 'dark' ? ICON_DARK : ICON_LIGHT;
@@ -110,7 +109,6 @@ async function setLang(code, label) {
   if (CUR_CITY) fetchWeather();
 }
 
-// ── Theme ─────────────────────────────────────
 function toggleTheme() {
   const html  = document.documentElement;
   const next  = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -143,7 +141,7 @@ async function fetchWeather() {
       throw new Error(data.error || "Weather request failed");
     }
 
-    const current  = data.weather;
+    const current  = data.weatherData;
     const forecast = data.forecast;
 
     lastLat = current.coord.lat;
@@ -208,7 +206,6 @@ function renderSunTimes(data) {
   document.getElementById('sunDot').setAttribute('cy', cy.toFixed(1));
 }
 
-// ── Render AQI ────────────────────────────────
 async function renderAQI(lat, lon) {
   try {
     const res  = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
@@ -301,7 +298,7 @@ function drawWeatherEffect(condition) {
   }
 }
 
-// Rain
+
 function startRain(canvas, ctx, heavy=false) {
   const count = heavy ? 250 : 140;
   for (let i=0; i<count; i++) {
@@ -332,7 +329,6 @@ function startRain(canvas, ctx, heavy=false) {
   animate();
 }
 
-// Snow
 function startSnow(canvas, ctx) {
   for (let i=0; i<120; i++) {
     canvasParticles.push({
