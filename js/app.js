@@ -143,6 +143,7 @@ async function fetchWeather() {
 
     const current  = data.weatherData;
     const forecast = data.forecast;
+    const air = data.air;
 
     lastLat = current.coord.lat;
     lastLon = current.coord.lon;
@@ -150,6 +151,7 @@ async function fetchWeather() {
     renderCurrent(current);
     renderForecast(forecast);
     renderSunTimes(current);
+    renderAQI(air);
 
     setState('result');
     drawWeatherEffect(current.weather[0].main.toLowerCase());
@@ -206,7 +208,7 @@ function renderSunTimes(data) {
   document.getElementById('sunDot').setAttribute('cy', cy.toFixed(1));
 }
 
-async function renderAQI(lat, lon) {
+function renderAQI(data) {
   try {
     const res  = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
     const data = await res.json();
